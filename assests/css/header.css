@@ -16,11 +16,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 0 1rem;
-    position: relative;
+    position: fixed;
     z-index: 100;
     background: var(--menu-bg);
+    background: none;
 }
+
+
 
 .logo-container img {
     height: 5rem;
@@ -144,4 +148,10 @@ header {
         font-size: 0.8rem;
         padding: 0.5rem 0;
     }
+}
+
+.header-spacer {
+    height: 5rem; /* 與 header/logo 高度一致 */
+    width: 100%;
+    background: transparent;
 }
