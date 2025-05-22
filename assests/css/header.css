@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+    padding: 0 1rem;
+}
+
+.logo-container img {
+    height: 40px;
+}
+
+/* Menu button */
+.menu-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #39abe0;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    z-index: 101;
+    margin: 10px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.menu-btn span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* X 動畫 */
+.menu-btn.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu-btn.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Menu 外層控制動畫 */
+.menu {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 真正可見區塊 */
+.menu-inner {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 展開動畫效果 */
+.menu.active {
+    max-height: 500px;
+}
+
+/* Menu link 樣式 */
+.menu a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: brandon-grotesque, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: rgb(86, 198, 253);
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* 桌面版橫向排列 */
+@media (min-width: 769px) {
+    .menu {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        box-shadow: none;
+        max-height: none;
+        padding: 0;
+        width: auto;
+        gap: 1.5rem;
+    }
+
+    .menu-inner {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .menu a {
+        width: auto;
+        padding: 12px 10px;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+}
