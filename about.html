@@ -7,6 +7,14 @@
   <link rel="icon" href="assests/images/Hiodoshi-Ao_icon.png" />
 </head>
 <body>
+    <div id="header-placeholder"></div>
     
+  <script>
+    fetch("/includes/header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("header-placeholder").innerHTML = html;
+      });
+  </script>
 </body>
 </html>
