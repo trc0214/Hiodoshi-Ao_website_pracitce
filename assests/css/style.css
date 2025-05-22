@@ -1,0 +1,12 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    display: none;   
+}
+
+.menu-btn {
+    height: ;
+}
