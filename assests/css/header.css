@@ -50,9 +50,11 @@ header {
 .menu-btn.active span:nth-child(1) {
     transform: translateY(6px) rotate(45deg);
 }
+
 .menu-btn.active span:nth-child(2) {
     opacity: 0;
 }
+
 .menu-btn.active span:nth-child(3) {
     transform: translateY(-6px) rotate(-45deg);
 }
@@ -94,10 +96,14 @@ header {
     font-size: 14px;
     font-weight: 600;
     line-height: 21px;
-    color: rgb(86, 198, 253);
+    color: rgb(17, 110, 155);
     outline: none;
     cursor: pointer;
     transition: all 0.2s ease;
+}
+
+.menu a:hover {
+    color: rgb(86, 198, 253);
 }
 
 /* 桌面版橫向排列 */
