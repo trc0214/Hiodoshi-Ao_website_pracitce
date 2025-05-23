@@ -154,3 +154,10 @@ header {
         padding: 0.5rem 0;
     }
 }
+
+/* ========== Spacer for Fixed Header ========== */
+.header-spacer {
+    height: 6rem;
+    width: 100%;
+    background: transparent;
+}
