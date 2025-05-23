@@ -36,3 +36,10 @@ fetch("/includes/header.html")
         // 監聽 resize 事件，動態調整位置
         window.addEventListener('resize', adjustMenuPosition);
     });
+
+// 載入 footer 並初始化
+fetch("/includes/footer.html")
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById("footer-placeholder").innerHTML = html;
+    });
