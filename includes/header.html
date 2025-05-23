@@ -1,28 +1,29 @@
+<!-- HTML: header.html -->
 <link rel="stylesheet" href="/assests/css/header.css">
-<!-- 固定 Header -->
-<header>
-    <div class="logo-container">
-        <img src="/assests/images/hiodoshi-Ao_logo.png" alt="">
-    </div>
 
-    <div class="menu-container">
-        <button class="menu-btn" aria-label="Open menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-</header>
+<!-- Fixed Header and Dropdown Container -->
+<div class="header-wrapper">
+    <header>
+        <div class="logo-container">
+            <img src="/assests/images/hiodoshi-Ao_logo.png" alt="Logo">
+        </div>
 
-<!-- dropdown menu 獨立於 header 外部 -->
-<nav class="menu" aria-label="Main navigation">
-    <div class="menu-inner">
-        <a href="/index.html">TOP</a>
-        <a href="/about.html">ABOUT</a>
-        <a href="/fanart.html">FANART</a>
-        <a href="/contact.html">CONTACT</a>
-    </div>
-</nav>
+        <div class="menu-container">
+            <button class="menu-btn" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
 
-<!-- Spacer for header -->
-<div class="header-spacer"></div>
+    <!-- Dropdown Menu -->
+    <nav class="menu" aria-label="Main navigation">
+        <div class="menu-inner">
+            <a href="/index.html">TOP</a>
+            <a href="/about.html">ABOUT</a>
+            <a href="/fanart.html">FANART</a>
+            <a href="/contact.html">CONTACT</a>
+        </div>
+    </nav>
+</div>
