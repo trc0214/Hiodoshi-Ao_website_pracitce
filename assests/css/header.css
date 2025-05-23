@@ -1,3 +1,14 @@
+/* ========== Global Reset ========== */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ========== CSS Variables ========== */
 :root {
     --primary-color: rgb(17, 110, 155);
     --hover-color: rgb(86, 198, 253);
@@ -8,23 +19,16 @@
     --menu-line-height: 0.2rem;
 }
 
-* {
-    box-sizing: border-box;
-}
-
+/* ========== Header Layout ========== */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 0 1rem;
     position: fixed;
+    width: 100%;
     z-index: 100;
     background: var(--menu-bg);
-    background: none;
 }
-
-
 
 .logo-container img {
     height: 5rem;
@@ -43,10 +47,9 @@ header {
     justify-content: center;
     align-items: center;
     gap: 6px;
-    z-index: 101;
     margin: 0.5rem;
+    z-index: 101;
     color: white;
-    font-size: xx-large;
 }
 
 .menu-btn span {
@@ -58,46 +61,52 @@ header {
     transition: var(--transition);
 }
 
-/* ========== Menu Button Animation ========== */
+/* Menu Button Animation - Perfect X */
 .menu-btn.active span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
+    transform: rotate(45deg) scaleX(1.5);
+    position: relative;
+    top: 9px;
 }
+
 .menu-btn.active span:nth-child(2) {
     opacity: 0;
 }
+
 .menu-btn.active span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
+    transform: rotate(-45deg) scaleX(1.5);
+    position: relative;
+    top: -9px;
 }
 
-/* ========== Menu ========== */
+/* ========== Mobile Menu ========== */
 .menu {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.4s ease;
-    background-color: var(--menu-bg);
     position: absolute;
     top: 100%;
     right: 0;
     width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    background-color: var(--menu-bg);
     box-shadow: var(--shadow);
-}
-
-.menu-inner {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
+    transition: max-height 0.4s ease;
 }
 
 .menu.active {
     max-height: 500px;
 }
 
+.menu-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
 /* ========== Menu Links ========== */
 .menu a {
     display: block;
     width: 100%;
-    text-align: center;
     padding: 0.75rem 0;
+    text-align: center;
     text-decoration: none;
     font-family: brandon-grotesque, sans-serif;
     font-size: 0.875rem;
@@ -110,7 +119,7 @@ header {
     color: var(--hover-color);
 }
 
-/* ========== Desktop Styles ========== */
+/* ========== Responsive Styles ========== */
 @media (min-width: 769px) {
     .menu {
         display: flex !important;
@@ -150,8 +159,9 @@ header {
     }
 }
 
+/* ========== Spacer for Fixed Header ========== */
 .header-spacer {
-    height: 5rem; /* 與 header/logo 高度一致 */
+    height: 6rem;
     width: 100%;
     background: transparent;
 }
