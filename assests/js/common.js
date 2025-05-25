@@ -43,3 +43,9 @@ fetch("/includes/footer.html")
     .then(html => {
         document.getElementById("footer-placeholder").innerHTML = html;
     });
+
+fetch("/includes/banner.html")
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById("banner-placeholder").innerHTML = html;
+    })

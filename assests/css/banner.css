@@ -1,0 +1,75 @@
+.banner {
+    width: 100%;
+    height: 61.135vh; /* ≈660px on 1080p screens */
+    overflow: hidden;
+    background-color: black; /* Optional: fallback */
+}
+
+.banner-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-list {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    animation: banner-swipe 42s linear infinite;
+}
+
+.item {
+    width: 100vw;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Fallback for spacing */
+}
+
+.item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+@keyframes banner-swipe {
+    0% { transform: translateX(0); }
+    14.28% { transform: translateX(0); }
+
+    21.42% { transform: translateX(-100vw); }
+    28.56% { transform: translateX(-100vw); }
+
+    35.70% { transform: translateX(-200vw); }
+    42.84% { transform: translateX(-200vw); }
+
+    50% { transform: translateX(-300vw); }
+    57.14% { transform: translateX(-300vw); }
+
+    64.28% { transform: translateX(-400vw); }
+    71.42% { transform: translateX(-400vw); }
+
+    78.56% { transform: translateX(-500vw); }
+    85.70% { transform: translateX(-500vw); }
+
+    92.84% { transform: translateX(-600vw); }
+    100%   { transform: translateX(-600vw); }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 45vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 35vh;
+    }
+}
