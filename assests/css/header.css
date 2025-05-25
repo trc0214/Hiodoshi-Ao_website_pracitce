@@ -88,7 +88,6 @@ header {
 
 /* ========== Dropdown Menu ========== */
 .menu {
-    width: 100%;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
@@ -122,7 +121,14 @@ header {
 
 /* ========== Responsive ========== */
 @media (min-width: 769px) {
+    .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
     .menu {
+        padding-right: 1rem;
         display: flex !important;
         flex-direction: row;
         max-height: none;
@@ -136,6 +142,7 @@ header {
     }
 
     .menu a {
+        font-size: 1.025rem;
         padding: 0.75rem 0.625rem;
     }
 
