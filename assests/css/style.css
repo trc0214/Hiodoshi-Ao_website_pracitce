@@ -1,12 +1,9 @@
-header {
-    display: flex;
-    justify-content: space-between;
-}
-
-.menu {
-    display: none;   
-}
-
-.menu-btn {
-    
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("/assests/images/bg_cover.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
