@@ -57,13 +57,7 @@ input[type="radio"] {
 
 .img-change label {
     cursor: pointer;
-    border: 2px solid transparent;
     border-radius: 6px;
-    transition: border-color 0.3s ease;
-}
-
-.img-change label:hover {
-    border-color: #888;
 }
 
 .intro {
@@ -97,7 +91,8 @@ input[type="radio"] {
     color: #0070c9;
     margin-top: 0.5rem;
     padding-top: 0.5rem;
-    border-top: 2px solid #ccc; /* 分隔線 */
+    border-top: 2px solid #ccc;
+    /* 分隔線 */
     width: 100px;
     text-align: center;
 }
@@ -149,4 +144,52 @@ input[type="radio"] {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     color: #003366;
+}
+
+@media (min-width: 960px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .tachie-container {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 0;
+        flex: 1;
+        overflow: visible;
+    }
+
+    .img-change {
+        order: 1;
+        padding-top: 0;
+    }
+
+    .tachie {
+        order: 2;
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .intro {
+        order: 3;
+        flex: 1;
+        max-width: 380px;
+        padding: 0;
+    }
+
+    .bg-box {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
