@@ -148,6 +148,5 @@ input[type="radio"] {
 .t-sns a:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    background-color: #f5f8fc;
     color: #003366;
 }
