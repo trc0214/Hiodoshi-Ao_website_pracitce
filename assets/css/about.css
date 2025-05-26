@@ -1,0 +1,51 @@
+input[type="radio"] {
+    display: none;
+}
+
+.tachie img {
+    display: none;
+    width: 100%;
+    height: auto;
+    margin-right: -14rem;
+}
+
+/* 根據選擇的 radio 顯示正確圖像 */
+#megane1:checked~.tachie .img1 {
+    display: block;
+}
+
+#megane2:checked~.tachie .img2 {
+    display: block;
+}
+
+#megane3:checked~.tachie .img3 {
+    display: block;
+}
+
+/* 外觀與互動 */
+.tachie-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 10px;
+    gap: 10px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.img-change {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 3.825rem;
+    padding-top: 4rem;
+}
+
+.img-change img {
+    width: 100%;
+}
+
+.img-change label {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 6px;
+}
