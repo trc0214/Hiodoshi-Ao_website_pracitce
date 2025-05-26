@@ -69,7 +69,6 @@ footer {
 /* Responsive tweaks */
 @media (max-width: 480px) {
     .footer-nav {
-        flex-direction: column;
         gap: 0.75rem;
     }
 
