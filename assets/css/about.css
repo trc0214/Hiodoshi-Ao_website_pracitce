@@ -2,14 +2,32 @@ input[type="radio"] {
     display: none;
 }
 
+.tachie-container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    align-items: flex-start;
+    position: relative;
+    max-width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    /* 可選：防止橫向溢出滾動條 */
+}
+
+.tachie {
+    flex: 1;
+    max-width: 100%;
+}
+
 .tachie img {
     display: none;
     width: 100%;
     height: auto;
-    margin-right: -14rem;
+    max-width: 100%;
 }
 
-/* 根據選擇的 radio 顯示正確圖像 */
+/* 顯示選中的大圖 */
 #megane1:checked~.tachie .img1 {
     display: block;
 }
@@ -22,30 +40,28 @@ input[type="radio"] {
     display: block;
 }
 
-/* 外觀與互動 */
-.tachie-container {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 10px;
-    gap: 10px;
-    align-items: flex-start;
-    position: relative;
-}
-
 .img-change {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    width: 3.825rem;
-    padding-top: 4rem;
+    gap: 0.5rem;
+    width: 4rem;
+    padding-top: 2rem;
+    flex-shrink: 0;
 }
 
 .img-change img {
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 .img-change label {
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.img-change label:hover {
+    border-color: #888;
 }
