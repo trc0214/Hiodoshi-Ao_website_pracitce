@@ -149,6 +149,7 @@ header {
     .menu a {
         font-size: 1.025rem;
         padding: 0.75rem 0.625rem;
+        padding-top: 1.025rem;
     }
 
     .menu-btn {
@@ -169,7 +170,7 @@ header {
 
 /* ========== Spacer for Fixed Header ========== */
 .header-spacer {
-    height: 6rem;
+    height: 4rem;
     width: 100%;
     background: transparent;
 }

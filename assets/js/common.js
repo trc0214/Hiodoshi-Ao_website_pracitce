@@ -62,9 +62,20 @@ function initHeaderMenu() {
 function adjustMenuPosition() {
     const header = document.querySelector('header');
     const menu = document.querySelector('.menu');
-    if (header && menu) {
+    const spacer = document.querySelector('.header-spacer');
+
+    if (header) {
         const headerHeight = header.offsetHeight;
-        menu.style.top = `${headerHeight}px`;
+
+        // 設定 menu 的 top（可選）
+        if (menu) {
+            menu.style.top = `${headerHeight}px`;
+        }
+
+        // ✅ 設定 spacer 高度
+        if (spacer) {
+            spacer.style.height = `${headerHeight}px`;
+        }
     }
 }
 
