@@ -49,3 +49,21 @@ fetch("/includes/banner.html")
     .then(html => {
         document.getElementById("banner-placeholder").innerHTML = html;
     })
+
+document.addEventListener('DOMContentLoaded', function () {
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+
+    galleryItems.forEach(img => {
+        img.addEventListener('dblclick', () => {
+            modalImg.src = img.src;
+            modal.classList.add('show');
+        });
+    });
+});
+
+function hideModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('show');
+}
