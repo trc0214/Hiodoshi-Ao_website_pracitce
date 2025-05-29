@@ -67,3 +67,35 @@ function hideModal() {
     const modal = document.getElementById('imageModal');
     modal.classList.remove('show');
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname;
+    const menuLinks = document.querySelectorAll(".menu a");
+
+    menuLinks.forEach(link => {
+        if (link.getAttribute("href") = currentPath) {
+            link.classList.add("active");
+        }
+    });
+    console.log("Current path:", currentPath, "Menu links:", menuLinks);
+});
+
+// 動態載入 header.html
+fetch('/includes/header.html')
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+
+        // ✅ 等 header 插入後再選取 menu link 並高亮當前頁
+        const path = window.location.pathname;
+        console.log("Current path:", path);
+
+        const menuLinks = document.querySelectorAll('.menu a');
+        console.log("Menu links:", menuLinks);
+
+        menuLinks.forEach(link => {
+            if (link.getAttribute('href') === path) {
+                link.classList.add('active');  // 你可在 CSS 裡定義 .active 顏色
+            }
+        });
+    });

@@ -97,6 +97,11 @@ header {
     max-height: 500px;
 }
 
+.menu a.active {
+    color: var(--hover-color);
+    font-weight: bold;
+}
+
 .menu-inner {
     display: flex;
     flex-direction: column;
